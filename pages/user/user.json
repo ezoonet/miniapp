@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "empower":"../../components/empower/empower",
+    "unlink":"../../components/unlink/unlink"
+  }
+}

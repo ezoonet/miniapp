@@ -1,0 +1,255 @@
+.empower{
+  height: 100vh;
+  box-sizing: border-box;
+  padding-top: 150rpx;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .3);
+  z-index: 101;
+}
+.empower .inner{
+  width: 300px;
+  margin: 0 auto;
+  padding:30px 0;
+  background: #fff;
+  border-radius: 5px;
+}
+.container{
+  background: #dd3f4e;
+  min-height: 100vh;
+  padding: 15px;
+}
+.shadow{
+  padding: 15px 10px;
+  background: rgba(255, 255, 255,.3);
+  border-radius: 6px;
+}
+.shadow .inner{
+  padding:25px 15px;
+  position: relative;
+  border-radius: 6px;
+  background: #fff;
+}
+.shadow .inner .inner-bg{
+  position: absolute;
+  width: 280px;
+  height: 15px;
+  top: -7.5px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.shadow .inner .image-wrap{
+  width: 90px;
+  height: 90px;
+  margin-right: 10px;
+}
+.shadow .inner .image-wrap image{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.shadow .inner .info .title{
+  font-size: 15px;
+  line-height: 20px;
+  height: 40px;
+  color: #000;
+}
+.shadow .inner .info .address{
+  font-size: 12px;
+  margin: 5px 0 20px;
+  color: #999;
+}
+.shadow .inner .info .price-wrap{
+  align-items: flex-end;
+  margin-top: 20px;
+}
+.shadow .inner .info .price{
+  font-size: 12px;
+  color: #999;
+}
+.shadow .inner .info .kj-price{
+  font-size: 14px;
+  color: #f11750;
+}
+.bargain-body .inner{
+  padding: 25px;
+}
+.bargain-body .title1{
+  font-size: 15px;
+  color: #353535;
+  text-align: center;
+}
+.bargain-body  .timmer{
+  font-size: 12px;
+  height: 26px;
+  color: #ff8fa5;
+}
+.bargain-body  .timmer .diffend{
+  color: #999;
+}
+
+.bargain-body  .timmer .day{
+  color: #e51c23;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+.bargain-body  .timmer .text{
+  color: #f11750;
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  line-height: 17px;
+  text-align: center;
+  background: #ffc1cd;
+  border-radius: 4px;
+  margin-right: 3px;
+  margin-left: 3px;
+}
+.button{
+  width: 95%;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 1px 4px 0 rgba(255, 41, 90,.5);
+  margin: 15px auto 0;
+  color: #fff;
+  font-size: 16px;
+  position: relative;
+}
+.button.default-button{
+  background-color: #f5f6f7;
+  border:1px solid #e3e4e5;
+  box-shadow: none;
+  color: #353535
+}
+.progress-wrap{
+  background-color: #f0f1f2;
+	box-shadow: inset 0px 2px 8px 0px 
+		rgba(209, 216, 223, 0.3); 
+    height: 17px;
+    border-radius: 8.5px;
+    width: 100%;
+    margin: 10px 0;
+}
+.progress-wrap .progress-inner{
+  background-image: linear-gradient(90deg, 
+		#ffcf5d 0%, 
+		#ff7f29 100%), 
+	linear-gradient(
+		#f0f1f2, 
+		#f0f1f2);
+	background-blend-mode: normal, 
+		normal;
+    height: 100%;
+    border-radius: 8.5px;
+}
+.price-wrap2{
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.price-wrap2 text{
+  font-size: 19px;
+  font-weight: bold;
+}
+.bargain-list .bargain-list--title{
+  text-align: center;
+  font-size: 15px;
+}
+.bargain-list .item{
+  margin-bottom: 20px;
+}
+.bargain-list .item:last-child{
+  margin-bottom: 0;
+}
+.bargain-list .item-img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+.bargain-list .item-img image{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.bargain-list .username{
+  font-size: 14px;
+  color: #353535
+}
+.bargain-list .time{
+  font-size: 12px;
+  color: #999;
+}
+.bargain-list .remain{
+  font-size: 12px;
+  color: #666
+}
+.bargain-toast{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  height: 100%;
+  width: 100%;
+}
+.bargain-toast .inner{
+  width: 90%;
+  height: auto;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.bargain-toast .inner .bg{
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.bargain-toast .button-img{
+  width: 250px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+}
+.bargain-toast .button-text{
+  width: 250px;
+  height: 55px;
+  line-height: 55px;
+  color: #dd3f4e;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  font-size: 20px;
+  text-align: center;
+}
+.share-button{
+  position: absolute;
+  z-index: 9;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  top: 0;
+  left: 0;
+}
+.bargain-toast .win-text{
+  position: absolute;
+  bottom: 240px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  font-size: 18px;
+  text-align: center;
+}
+.bargain-toast .win-text ._inner-text{
+  font-size: 22px;
+}

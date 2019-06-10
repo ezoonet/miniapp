@@ -1,0 +1,42 @@
+<view class="container {{isPhoneX?'fix-iphonex-pd166':''}}">
+ <view class='wrap dp-flex common-mb'>
+    <view class="img-wrap">
+       <image mode='aspectFill' src="{{goods.goods_primary_img.small_pic}}"></image>
+    </view>
+    <view class='info flex-1'>
+       <view class='title title-hidden'>{{goods.goods_title}}</view>
+       <view class='num'>数量: {{goods.total_num}}</view>
+       <view class='price-wrap dp-flex fl-al-center fl-jc-between'>
+          <view class='address'>{{goods.shop_address}}</view>
+          <view class='price color-red'>¥{{goods.total_price}}</view>
+       </view>
+    </view>
+ </view>
+ <!--商家信息-->
+ <view class='shop-info common-mb dp-flex fl-al-center' wx:if="{{goods.status==0}}" bindtap='callTel' data-tel="{{goods.shop_phone}}">
+   <view class='shop-info-l flex-1'>
+      <view class='shop-name'>{{goods.shop_name}}</view>
+      <view class='shop-address'>{{goods.shop_address}}</view>
+   </view>
+   <view class='shop-info-r'>
+      <image src="/images/common/tel.png"></image>
+   </view>
+ </view>
+ <!--电话信息-->
+ <view class='tel-wrap dp-flex fl-al-center common-mb' bindtap='gotel' wx:if="{{goods.status==0}}"  >
+    <view class='tel-head'>
+      <view class='h1'>手机号</view>
+      <view class='tel-tips'>购买成功后,会收到兑换码短信</view>
+    </view>
+    <view class='tel flex-1 text-r'>{{tel}}</view>
+    <image class="arrow" src="../../images/common/right-arrow.png"></image>
+  </view>
+</view>
+<view class='cancel common-mb' wx:if="{{goods.status==9}}">
+    交易已关闭
+</view>
+<view class="height49"></view>
+<view wx:if="{{goods.status==0}}" class="bottom-options dp-flex fl-al-center {{isPhoneX?'fix-iphonex-button':''}}">
+    <view class="button kj-button"  bindtap='gopay'>立即支付</view>
+    <view class="button" bindtap='cancel' >取消订单</view>
+</view>

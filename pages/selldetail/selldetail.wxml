@@ -1,0 +1,20 @@
+
+<!--授权模块-->
+<view class="empower" wx:if="{{empowerFlag && !unlink}}">
+    <view class="inner">
+        <empower bindgetUserinfo="getUserinfo"></empower>
+    </view>
+</view>
+<!--账号冻结已抽出来页面-->
+<!-- <unlink wx:if="{{unlink}}" bindreFresh="getUserinfo"></unlink> -->
+<!--商品详情-->
+<sku wx:if="{{sku.id}}"  sku="{{sku}}" stop="{{stoptimeFlag}}"></sku>
+<view class="container {{sku.isPhoneX?'fix-iphonex-pd166':''}}">
+  <header wx:if="{{sku.id}}" goods="{{sku}}" bindstoptime="stoptime"></header>
+</view>
+<view class="height49"></view>
+<view hidden='{{sku.id}}'>
+  <loading ></loading>
+</view>
+
+

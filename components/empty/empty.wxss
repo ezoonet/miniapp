@@ -1,0 +1,7 @@
+/* components/empty/empty.wxss */
+.empty{
+  font-size: 12px;
+  color: #999;
+  text-align: center;
+  margin: 5px 0;
+}

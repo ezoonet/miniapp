@@ -1,0 +1,7 @@
+/* components/scrollbottom/scrollbottom.wxss */
+.bottom-text{
+  font-size: 12px;
+  color: #999;
+  text-align: center;
+  line-height: 36px;
+}

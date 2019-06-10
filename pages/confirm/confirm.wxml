@@ -1,0 +1,62 @@
+<view class="container {{isPhoneX?'fix-iphonex-pd166':''}}">
+     <view class='goods dp-flex common-mb'>
+       <view class='image-wrap'>
+          <image src="{{goods.img}}"></image>
+       </view>
+       <view class='info flex-1'>
+          <view class="title">{{goods.title}}</view>
+          <view class='address'>{{goods.shop_address}}<text style='margin:0 2px'>|</text>{{goods.shop_name}}</view>
+          <view class='price-wrap dp-flex fl-jc-between fl-al-center'>
+             <view class='price-inner'>
+                <view class='price'>¥{{goods.price}}</view>
+                <view class='oprice'>¥{{goods.market_price}}</view>
+             </view>
+             <view class="num">x{{goods.num}}</view>
+          </view>
+       </view>
+     </view>
+     <view class='tel-wrap dp-flex fl-al-center common-mb' bindtap='gotel'>
+       <view class='tel-head'>
+          <view class='h1'>手机号</view>
+          <view class='tel-tips'>购买成功后,会收到兑换码短信</view>
+       </view>
+       <view class='tel flex-1 text-r'>{{tel}}</view>
+       <image class="arrow" src="../../images/common/right-arrow.png"></image>
+     </view>
+     <!--下单须知-->
+      <view class="notice common-mb">
+          <view class='h1'>下单须知</view>
+          <view class='item dp-flex'>
+            <view class="round"></view>
+            <view class='inner'>请先确认订单详情,订单购买成功后将不予退换</view>
+          </view>
+          <view class='item dp-flex'>
+            <view class="round"></view>
+            <view class='inner'>下单成功后,您将收到检验码短信,未收到短信时,请检查是否短信拦截</view>
+          </view>
+          <view class='item dp-flex'>
+            <view class="round"></view>
+            <view class='inner'>一经下单,即代表您同意《蚁购精选用户服务协议》</view>
+          </view>
+          <view class='item dp-flex'>
+            <view class="round"></view>
+            <view class='inner'>如遇不可抗力因素,蚁购有权取消、修改或暂停活动</view>
+          </view>
+          <view class='item dp-flex'>
+            <view class="round"></view>
+            <view class='inner'>如发现用户以不正当手段参与本次活动,蚁购有权取消其活动参与资格,并要求其对已发放的活动共所得进行返还</view>
+          </view>
+          <view class='item dp-flex'>
+            <view class="round"></view>
+            <view class='inner'>在法律允许范围内,蚁购对此活动拥有最终解释权,未尽事宜请咨询蚁购客服</view>
+          </view>
+      </view>
+</view>
+<view class="height49"></view>
+<view class="bottom-options {{isPhoneX?'fix-iphonex-button':''}}">
+  <view class="item flex-1">
+     共{{goods.num}}件商品 合计: 
+     <text>¥{{goods.total}}</text>
+  </view>
+  <view class="goshop kj-button" bindtap='toConfirm'>立即付款</view>
+</view>

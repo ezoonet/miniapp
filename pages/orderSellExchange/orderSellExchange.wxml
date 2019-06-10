@@ -1,0 +1,33 @@
+<!--pages/orderSellExchange/orderSellExchange.wxml-->
+<wxs module="default" src="../../wxs/default.wxs" ></wxs>
+<view class='container'>
+  <view class='wrap dp-flex common-mb' data-id="{{goods.goods_id}}" bindtap='goGoods'>
+    <view class="img-wrap">
+       <image mode='aspectFill' src="{{goods.goods_primary_img.small_pic}}"></image>
+    </view>
+    <view class='info flex-1'>
+       <view class='title title-hidden'>{{goods.goods_title}}</view>
+       <view class='num'>数量: {{goods.total_num}}</view>
+       <view class='price-wrap dp-flex fl-al-center fl-jc-between'>
+          <view class='address'>{{goods.shop_address}}</view>
+          <view class='price color-red'>¥{{goods.total_price}}</view>
+       </view>
+    </view>
+  </view>
+  <view class='bottom'>
+    <view class='h1'>兑换券</view>
+    <view class='item' wx:for="{{goods.code}}" wx:key="{{item.code}}">
+      <image mode="aspectFill" src="{{default.defalutGoodsImg(item.url)}}"></image>
+      <view class='text'>兑换码:{{item.code}}</view>
+    </view>
+    <view class='shop-info dp-flex fl-al-center' bindtap='callTel' data-tel="{{goods.shop_phone}}">
+      <view class='shop-info-l flex-1'>
+          <view class='shop-name'>{{goods.shop_name}}</view>
+          <view class='shop-address'>{{goods.shop_address}}</view>
+      </view>
+      <view class='shop-info-r'>
+          <image src="/images/common/tel.png"></image>
+      </view>
+    </view>
+  </view>
+</view>

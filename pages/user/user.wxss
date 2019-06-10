@@ -1,0 +1,73 @@
+/* pages/user/user.wxss */
+.empower{
+  height: 100vh;
+  background: #fff;
+  box-sizing: border-box;
+  padding-top: 50px;
+}
+.user-wrap{
+  min-height: 100vh;
+  background: #f5f6f7;
+}
+.user-wrap .item{
+  border-bottom: 1px solid #f5f6f7;
+  padding: 15px 0;
+  position: relative;
+}
+.user-wrap .item .contact{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width:100%;
+  z-index: 11;
+  opacity: 0;
+}
+.user-wrap .item:last-child{
+  border-bottom: 0;
+}
+.user-wrap .user-top{
+  margin-bottom: 10px;
+}
+.user-wrap .user-top,.user-wrap .user-bottom{
+  padding-left: 20px;
+  background: #fff;
+}
+.user-wrap .user-top .img-wrap{
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 10px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.user-wrap .user-top .img-wrap image{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.user-wrap .user-top .name{
+  font-size: 18px;
+  color: #000;
+}
+.item-header image{
+  width: 20px;
+  height: 20px
+}
+.item-header text{
+  font-size: 15px;
+  display: block;
+  margin-left: 10px;
+}
+.item-foot{
+  padding-top: 15px;
+}
+.item-foot text{
+  font-size: 14px;
+  color: #333;
+}
+.item-foot image{
+  width: 24rpx;
+  height: 24rpx;
+  display: block;
+  margin:0 10px;
+}

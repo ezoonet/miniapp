@@ -1,0 +1,54 @@
+<!--components/sku/sku.wxml-->
+<!-- <view>
+<view>{{sku.title}}</view>
+<button bindtap='closeSku'>关闭</button>
+</view> -->
+<view class="toast" wx:if="{{toastFlag}}" bindtap='closeSku'>
+</view>
+<view class="sku-wrap" wx:if="{{toastFlag}}" animation="{{animation}}">
+  <view class="close2" bindtap='closeSku'>
+  <image src="../../images/common/close2.png" class="close_img" ></image>
+  </view>
+    <view class="sku-inner-wrap dp-flex">
+      <view class="image-wrap">
+        <image class='_image' src="{{sku.img_list[0].middle_pic}}"></image>
+      </view>
+      <view class="info flex-1">
+          <view class="price-wrap">
+             <view class="price">¥{{sku.base_price}}</view>
+             <view class="stock-wrap dp-flex fl-al-center fl-jc-between">
+                <text class="stock"> 库存{{sku.stock}}件</text>
+                <text style='font-size:10px;color:#999' wx:if="{{sku.limit_qty>0}}">限购{{sku.limit_qty}}</text>
+             </view>
+            
+          </view>
+      </view>
+    </view>
+    <view class='halfline'></view>
+    <view class="dp-flex sku-num-wrap">
+      <view class="flex-1 text-l num-header">
+      <text>数量</text>
+      
+      </view>
+      <view class="dp-flex fl-al-center">
+        <image bindtap='reduce' src="../../images/common/reduce.png" class="icon reduce {{reduceBtn ? 'disabled':''}}"></image>
+        <view class="num">{{sku.num}}</view>
+        <image bindtap='add' src="../../images/common/add.png" class="icon add {{addBtn ? 'disabled' : ''}}"></image>
+      </view>
+    </view>
+    <view class="kj-button gonow" bindtap='goshop'>立即抢购</view>
+  </view>
+<view class="bottom-options {{isPhoneX?'fix-iphonex-button':''}}">
+  <view class="item" bindtap='toIndex'>
+    <image class='image' src="../../images/common/index.png"></image>
+    <text class='text'>首页</text>
+  </view>
+  <view class="item">
+    <image class='image' src="../../images/common/kefu.png"></image>
+    <text class='text'>客服</text>
+    <button open-type='contact' class="contact"></button>
+  </view>
+  <view class="goshop kj-button {{stopFlag ? 'disabled':''}}" bindtap='showSku'>
+    立即购买
+  </view>
+</view>

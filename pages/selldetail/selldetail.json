@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "sku": "../../components/sku/sku",
+    "empower": "../../components/empower/empower",
+    "unlink": "../../components/unlink/unlink",
+    "header": "../../components/goodsheader/goods",
+    "loading":"../../components/loading/loading"
+  },
+  "backgroundColor": "#f5f6f7",
+  "disableScroll": false
+}

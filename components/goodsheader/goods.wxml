@@ -1,0 +1,98 @@
+<import src="../../pages/wxParse/wxParse.wxml"/>
+<wxs module="dateUtil" src="../../wxs/timeUtil.wxs"></wxs>
+<view class="swiper-wrap">
+    <!--海报按钮-->
+    <!-- <view class="poster-tips" bindtap='closeToast'>获取海报</view> -->
+    <swiper class="swiper" autoplay="{{autoplay}}" indicator-dots circular bindchange="bindchange" >
+      <swiper-item class="swiper-item" wx:for="{{goods.img_list}}" wx:key="{{index}}">
+        <image class='image' mode="aspectFill" lazy-load data-id='{{index}}' src="{{item.big_pic}}"></image>
+      </swiper-item>
+    </swiper>
+    <view class="info-inner-wrap dp-flex">
+        <view class="price-wrap kj-button flex-1 dp-flex fl-al-center">
+            <view class="price-left">
+                ¥
+                <text class='text'>{{goods.base_price}}</text>
+            </view>
+            <view class="price-right">
+                <view class="oprice">
+                  {{goods.market_price}}
+                </view>
+                <view class='stock'>
+                  仅剩{{goods.stock}}件
+                </view>
+            </view>
+        </view>
+        <!--倒计时模块-->
+        <view class="timedown dp-flex fl-al-center fl-jc-center">
+          <view class='day'>距离结束还有{{day}}天</view>
+          <view class="time-inner">
+              <text class='text'>{{hour}}</text>:
+              <text class='text'>{{min}}</text>:
+              <text class='text'>{{sec}}</text>
+          </view>
+        </view>
+    </view>
+</view>
+<view class="toast" wx:if="{{toastFlag}}" bindtap='closeToast'>
+   <view class="poster-wrap" catchtap="stopBubble">
+      <image class='image' src="{{goods.img_list[0].big_pic}}" mode="widthFix"></image>
+      <view class="save dp-flex fl-al-center fl-jc-center" catchtap='download'>
+        <image class='download' src="../../images/common/download.png"></image>
+      保存图片
+      </view>
+   </view>
+</view>
+<!--内容模块-->
+<view class="info">
+  <view class="title">{{goods.title}}</view>
+  <view class="option-wrap dp-flex">
+    <view class="flex-1 item dp-flex  fl-al-center fl-jc-center">
+      <view class='round'></view>
+      <text>无需预约</text>
+    </view>
+    <view class="flex-1 item dp-flex  fl-al-center fl-jc-center">
+      <view class='round'></view>
+      <text>节假日通用</text>
+    </view>
+    <view class="flex-1 item dp-flex  fl-al-center fl-jc-center">
+      <view class='round'></view>
+      <text>不可退款</text>
+    </view>
+  </view>
+  <view class='halfline'></view>
+  <view class="h1">
+     温馨提示
+  </view>
+  <view class="tips">
+    <view class="head">使用时间:</view>
+    <view class="body">{{goods.expire}}</view>
+  </view>
+  <view class="tips">
+    <view class="head">联系电话:</view>
+    <view class="body">{{goods.shop_phone}}</view>
+  </view>
+  <view class="tips">
+    <view class="head">店铺名称:</view>
+    <view class="body">{{goods.shop_name}}</view>
+  </view>
+  <view class="tips">
+    <view class="head">店铺地址:</view>
+    <view class="body">{{goods.shop_address}}</view>
+  </view>
+</view>
+
+<!--客服-->
+<view class="kefu-wrap">
+   <view class="h1">添加客服</view>
+   <view class='inner dp-flex fl-al-center '>
+      <view class="text">想获取更多活动福利资讯，可添加客服申请加入蚁购生活专属超级VIP群</view>
+      <view class='add' data-kefu="{{goods.service_wechat}}" bindtap='addKefu'>添加</view>
+   </view>
+</view>
+
+<!--内容模块-->
+<view class='content'>
+  
+  <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>

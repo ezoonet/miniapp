@@ -1,0 +1,48 @@
+page{
+  background: #fff;
+}
+.top-text{
+  padding: 15px;
+  color: #999;
+  font-size: 12px;
+  
+}
+.edit{
+  padding-left: 20px;
+}
+.edit .item{
+  border-bottom: 1px solid #f5f6f7;
+  padding: 10px 10px 10px 0;
+}
+.edit .item-header{
+  font-size: 14px;
+  margin-right: 10px;
+  color: #353535
+}
+.edit input{
+  font-size: 14px;
+}
+.edit .code{
+  width: 207rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 30rpx;
+  background: #f5f6f7;
+  text-align: center;
+  font-size: 14px;
+  color: #353535;
+}
+.edit .code.disabled{
+  opacity: 0.5
+}
+.button{
+  color: #fff;
+  text-align: center;
+  width: 120px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 17.5px;
+  font-size: 14px;
+  margin: 20px auto 0;
+  background: #3ec95c;
+}

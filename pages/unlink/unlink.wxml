@@ -1,0 +1,6 @@
+<view class="unlink">
+  <image class='image' src="../../images/common/unlink.png"></image>
+  <view class="text">呀！连不上网络了~</view>
+  <button class="button kj-button" bindtap='reFresh'>刷新试试</button>
+  <button class="button contact" open-type='contact'>联系客服</button>
+</view>

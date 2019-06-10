@@ -1,0 +1,22 @@
+<!--pages/editTel/editTel.wxml-->
+<!--active 0表示要需要的 1表示要绑定-->
+<view class="top-text" wx:if="{{active==0}}">
+ 当前手机:{{current}}
+</view>
+<view class="edit">
+   <view class="item dp-flex fl-al-center">
+      <view class="item-header">
+        手机号
+      </view>
+      <input bindinput="onIpunt" class="flex-1" type='number' placeholder='请输入手机号'></input>
+   </view>
+   <view class="item dp-flex fl-al-center">
+      <view class="item-header">
+        验证码
+      </view>
+      <input class="flex-1"type="number" bindinput="onCode" placeholder='请输入验证码'></input>
+      <view bindtap='toCode'  class="code {{disabled ? 'disabled':''}}">{{code}}</view>
+   </view>
+</view>
+<view class="button" bindtap='bind'>确定</view>
+

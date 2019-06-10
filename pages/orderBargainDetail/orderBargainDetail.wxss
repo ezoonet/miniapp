@@ -1,0 +1,145 @@
+/* pages/orderSellDetail/orderSellDetail.wxss */
+page{
+  background: #f5f6f7
+}
+.wrap{
+  padding: 20px;
+  background: #fff;
+}
+.wrap .img-wrap{
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+.wrap .info .title{
+  font-size: 16px;
+  line-height: 22px;
+  color: #353535;
+}
+.wrap .info .num{
+  font-size: 12px;
+  margin: 10px 0 20px;
+  color: #999;
+}
+.wrap .info .address{
+  font-size: 12px;
+  color: #999;
+}
+.wrap .info .price{
+  font-size: 16px;
+}
+.wrap .img-wrap image{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.shop-info{
+  padding: 20px;
+  background: #fff;
+}
+.shop-info  .shop-address{
+  color: #999;
+  font-size: 12px;
+}
+.shop-info .shop-name{
+  font-size: 14px;
+  color: #353535;
+  margin-bottom: 5px;
+
+}
+.shop-info .shop-info-r{
+  width: 20px;
+  
+}
+.shop-info .shop-info-r image{
+  width: 20px;
+  height: 20px;
+  display: block;
+  transform: rotate(235deg)
+}
+.cancel{
+  font-size: 14px;
+  color: #999;
+  text-align: center;
+  line-height: 70px;
+  background: #Fff;
+}
+.bottom-options{
+  height: 49px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  background: #fff;
+  line-height: 49px;
+}
+.bottom-options .button{
+  font-size: 14px;
+  color: #353535;
+  text-align: center;
+  border: 1px solid #f5f6f7;
+  width: 80px;
+  height: 35px;
+  line-height: 35px;
+  margin-right:15px;
+  border-radius: 4px; 
+}
+.bottom-options .button.kj-button{
+  color: #fff;
+}
+.tel-wrap{
+  padding: 15px;
+  background: #fff;
+}
+.tel-wrap .h1{
+  margin-bottom: 5px;
+}
+.tel-wrap .tel-tips{
+  font-size: 12px;
+  color: #999;
+}
+.tel-wrap .tel-head{
+  margin-right: 10px;
+}
+.tel-wrap .tel{
+  font-size: 16px;
+  color: #333;
+}
+.tel-wrap .arrow{
+  width: 15px;
+  height: 15px;
+  display: block;
+  margin-left: 10px;
+}
+.bargain-list .item{
+  margin-bottom: 20px;
+}
+.bargain-list .item:last-child{
+  margin-bottom: 0;
+}
+.bargain-list .item-img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+.bargain-list .item-img image{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.bargain-list .username{
+  font-size: 14px;
+  color: #353535
+}
+.bargain-list .time{
+  font-size: 12px;
+  color: #999;
+}
+.bargain-list .remain{
+  font-size: 12px;
+  color: #666
+}

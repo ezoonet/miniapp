@@ -1,0 +1,228 @@
+.container{
+  min-height: 100vh;
+  background: #fff;
+}
+.container.active{
+  background: #f5f6f7
+}
+.weather-wrap{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.weather-wrap .search{
+  flex: 1;
+  overflow: hidden;
+  margin-top: 0;
+  margin-left: 10px;
+}
+.weather-wrap .weather{
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+.weather-wrap .weather image{
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin-right: 10rpx;
+}
+.tab{
+  display: flex;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 20px;
+}
+.tab .tabs{
+  margin-right: 15px;
+  color: #999;
+  position: relative;
+  padding-bottom: 5px;
+}
+.tab .tabs.active{
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+}
+.tab .tabs.active .line{
+  content: '';
+  position:absolute;
+  width: 30px;
+  height: 3px;
+  border-radius: 1.5px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+.item-wrap .item{
+  background: #fff;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  padding: 15px;
+  padding-bottom: 0;
+}
+.item-wrap .item .topimg{
+ width: 100%;
+ display: block;
+ background: #eee;
+ border-radius: 8px;
+}
+.item-wrap .address-wrap{
+  font-size: 12px;
+  color: #999;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+.item-wrap .item-info .title{
+  font-size: 15px;
+  line-height: 24px;
+  color: #353535;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.item-wrap .price-wrap{
+  display: flex;
+  align-items: flex-end;
+}
+.item-wrap .price-ex{
+  flex: 1;
+  overflow: hidden;
+}
+.item-wrap .price-wrap .price{
+  font-size: 16px;
+  color: #e51c23;
+}
+.item-wrap .price-wrap .oprice{
+  font-size: 12px;
+  text-decoration: line-through;
+  color: #666;
+  margin-left: 10px
+}
+.item-wrap .price-wrap .num{
+  color: #999;
+  font-size: 12px;
+}
+.item-wrap .price-wrap button{
+  height: 28px;
+  line-height: 28px;
+  color: #fff;
+  font-size: 14px;
+  border: none;
+  border-radius: 3px;
+}
+.sell-wrap .item{
+  background: #fff;
+  margin-bottom: 10px;
+  padding: 15px;
+
+}
+.sell-wrap .item .image-wrap{
+ width: 100%;
+ 
+}
+.sell-wrap .item .image-wrap image{
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 8px;
+}
+.sell-wrap .item .info{
+  flex: 1;
+  overflow: hidden;
+}
+.sell-wrap .item .price-wrap-all .button{
+  height: 28px;
+  line-height: 28px;
+  color: #fff;
+  font-size: 14px;
+  border: none;
+  border-radius: 3px;
+  width: 60px;
+  text-align: center;
+}
+.sell-wrap .item .info .title{
+  font-size: 14px;
+  line-height: 20px;
+  height: 40px;
+  color: #353535;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  font-weight: bold;
+}
+.sell-wrap .item .info .shop-name{
+  font-size: 12px;
+  color: #999;
+  margin: 10px auto;
+}
+.sell-wrap .item .info .shop-name .address{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.sell-wrap .price-wrap{
+  flex-direction: column;
+  margin-bottom: 3px;
+}
+.sell-wrap .price-wrap .num{
+  font-size: 12px;
+  color: #999;
+}
+.sell-wrap .price-wrap .price{
+  font-size: 30rpx;
+  color: #e51c23;
+}
+.sell-wrap .price-wrap .oprice{
+  font-size: 22rpx;
+  color: #999;
+  text-decoration: line-through;
+  
+  margin: 0 5px;
+}
+.sell-wrap .price-wrap .address{
+  font-size: 20rpx;
+  color: #999;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: right;
+  white-space: nowrap;
+}
+.sell-wrap .time-wrap{
+  display: flex;
+  border-top: 1px solid #f5f6f7;
+  justify-content: space-between;
+  padding-top: 15px;
+}
+.sell-wrap .time-wrap .time{
+  font-size: 12px;
+  color: #999;
+}
+.sell-wrap .time-wrap .progress-wrap{
+  height: 15px;
+  width: 100px;
+  border: 1px solid #e51c23;
+  border-radius: 7.5px;
+  overflow: hidden;
+  text-align: center;
+  position:relative;
+  color: #e51c23;
+  font-size: 12px;
+  line-height: 15px;
+}
+.sell-wrap .time-wrap .progress-wrap text{
+  position: relative;
+  z-index: 2;
+}
+.sell-wrap .time-wrap .progress-wrap .progress{
+  background: #ffe0e1;
+  height: 15px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index:1;
+}

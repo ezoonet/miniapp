@@ -1,0 +1,44 @@
+<view class="container">
+   <view class="search-wrap">
+      <view class="search">
+        <image  class='image' src="../../images/common/search.png"></image>
+        <input placeholder='搜索商品名称' focus value="{{inputVal}}" bindconfirm="search" bindinput='getInput'></input>
+       <image src="../../images/common/close.png" bindtap='clean' class="close"></image>
+      </view>
+      <view class="cancel" bindtap='cancel'>取消</view>
+   </view>
+   <!--搜索下拉-->
+   <!-- <view class="link-list" hidden='{{linkList.length==0}}'>
+     <view class="item" wx:for="{{linkList}}" wx:for-item="item" wx:key="*this">
+        <image src="../../images/common/search.png"></image>
+        <text>{{item.content}}</text>
+     </view>
+   </view> -->
+   <!--历史搜索-->
+   <view class="history" hidden='{{historyFlag!=true}}'>
+      <view class="history-header">
+        <text>最近搜索</text>
+        <!-- <image bindtap='clean' class="del" src="../../images/common/del.png"></image> -->
+      </view>
+      <view class="history-wrap">
+        <text wx:for="{{historyList}}" wx:key="*this" wx:for-item="item" data-text="{{item}}" bindtap='setSearch'>{{item}}</text>
+      </view>
+   </view>
+   <scroll-view wx:if="{{!historyFlag && list.length > 0}}"  class="sell-wrap" scroll-y style='height:{{winHeight-60}}px'>
+      <view class="item" data-id="{{item.id}}" bindtap='toDetail' wx:for="{{list}}" wx:for-item="item" class="item" wx:key="id">
+        <view class="image-wrap">
+            <image src="{{item.primary_img.middle_pic}}" mode="scaleToFill"></image>
+        </view>
+        <view class="info">
+           <view class="title">{{item.title}}</view>
+           <view class="shop-name">{{item.shop_name}}</view>
+           <view class="price-wrap">
+              <text class="price">¥{{item.base_price}}</text>
+              <text class="oprice">¥{{item.market_price}}</text>
+              <text class="address">位于{{item.shop_address}}</text>
+           </view>
+        </view>
+      </view>
+   </scroll-view>
+   <empty wx:if="{{!historyFlag && list.length == 0}}"></empty>
+</view>

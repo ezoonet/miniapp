@@ -1,0 +1,88 @@
+<wxs module="dateUtil" src="../../wxs/timeUtil.wxs"></wxs>
+<view class="container {{active==2 ? 'active':''}}">
+  <view class="pd-common bg-f" style='padding-bottom:0;'>
+    <view class="weather-wrap">
+      <view class="weather">
+        <image src="../../images/common/location.png"></image>{{weather}}
+      </view>
+      <!--搜索模块-->
+      <view class="search" bindtap='goSearch'>
+        <image class='image' src="../../images/common/search.png"></image>
+        搜索商品名称
+      </view>
+    </view>
+    <!--选项卡-->
+    <view class="tab">
+      <view data-active="1" bindtap='changelist' class="tabs {{active==1?'active':''}}">
+        生活家福利
+        <view class='line kj-button'></view>
+      </view>
+      <view data-active="2" bindtap="changelist" class="tabs {{active==2?'active':''}}">
+        限时特惠
+        <view class='line kj-button'></view>
+      </view>
+    </view>
+  </view>
+  <!--砍价列表模块-->
+    <view class="item-wrap" hidden="{{active!=1}}">
+      <view wx:for="{{bargain.list}}" wx:for-item="item" class="item" style="margin-bottom:0" wx:key="id">
+          <image src="{{item.primary_img.big_pic}}" mode="widthFix" class="topimg"></image>
+          <view class='address-wrap'>
+          <text>{{item.shop_name}}</text>
+          <text>{{item.shop_address}}</text>
+          </view>
+          <view class="item-info">
+              <view class="title">
+                {{item.title}}
+              </view>
+              <view class="price-wrap">
+                <view class="price-ex">
+                  <view>
+                    <text class="price">¥{{item.price}}</text>
+                    <text class="oprice">¥{{item.market_price}}</text>
+                  </view>
+                  <view class="num">剩{{item.stock}}份</view>
+                </view>
+                <button type='button' bindtap='toBargain' data-id="{{item.id}}" class="kj-button">去砍价</button>
+              </view>
+          </view>
+      </view>
+      <!--到底底部-->
+      <scrollbottom wx:if="{{bargain.bottomFlag}}"></scrollbottom>
+      <empty  wx:if="{{bargain.nodata}}"></empty>
+    </view>
+    <!--特价列表-->
+    <view class="sell-wrap" hidden="{{active!=2}}">
+      <view class="item"  data-id="{{item.id}}" bindtap='goSellDetail' wx:for="{{sell.list}}" wx:for-item="item" class="item" wx:key="id">
+        <view class="image-wrap">
+            <image lazy-load src="{{item.primary_img.original_pic}}" mode="widthFix"></image>
+        </view>
+        <view class="info">
+           <view class="shop-name dp-flex fl-jc-between">
+              <text style='margin-right:50px;'>{{item.shop_name}}</text> 
+              <text class="address flex-1 text-r">位于{{item.shop_address}}</text>
+           </view>
+           <view class="title">{{item.title}}</view>
+           <view class='dp-flex price-wrap-all fl-al-center;'>
+              <view class="price-wrap flex-1 dp-flex">
+                  <view>
+                    <text class="price">¥{{item.base_price}}</text>
+                    <text class="oprice">¥{{item.market_price}}</text>
+                  </view>
+                  <view class="num">剩{{item.stock}}份</view>
+              </view>
+              <view class='button kj-button'>去抢购</view>
+           </view>
+           <!-- <view class="time-wrap">
+             <view class="time">活动截止:{{dateUtil.dateFormat(item.end_time,'yyyy/MM/dd')}}</view>
+             <view class="progress-wrap">
+                <text>仅剩{{item.stock}}份</text>
+                <view class="progress" style="width:{{item.percent}}%"></view>
+             </view>
+           </view> -->
+        </view>
+      </view>
+      <scrollbottom wx:if="{{sell.bottomFlag}}"></scrollbottom>
+      <empty  wx:if="{{sell.nodata}}"></empty>
+    </view>
+</view>

@@ -1,0 +1,94 @@
+<!--- wxs -->
+<!--授权模块-->
+<view class="empower" wx:if="{{empowerFlag && !unlink}}">
+    <view class="inner">
+        <empower bindgetUserinfo="getUserinfo"></empower>
+    </view>
+</view>
+<view class='container'>
+  <view class="shadow common-mb">
+    <view class="inner dp-flex">
+      <image class='inner-bg' src="../../images/bargain/img_inbg.png"></image>
+      <view class='image-wrap'>
+         <image src="{{sku.primary_img.original_pic}}" data-img="{{sku.primary_img.original_pic}}" binderror="judgeImg2"></image>
+      </view>
+      <view class='info flex-1'>
+          <view class="title-hidden title">{{sku.title}}</view>
+          <view class='price-wrap dp-flex fl-jc-between'>
+             <view class='price'>原价:¥{{sku.price}}</view>
+             <view class='kj-price'>底价:¥{{sku.base_price}}</view>
+          </view>
+      </view>
+    </view>
+  </view>
+  <!--主体-->
+  <view class="shadow common-mb bargain-body">
+     <view class='inner'>
+        <image class='inner-bg' src="../../images/bargain/img_inbg.png"></image>
+        <view class='title1'>{{kjTitle}}</view>
+        <view class='timmer dp-flex fl-al-center fl-jc-center'>
+          <text class='diffend'>距离结束还剩:</text>
+          <text class='day'>{{day}}天</text>:
+          <text class='text'>{{hour}}</text>:
+          <text class='text'>{{min}}</text>:
+          <text class='text'>{{sec}}</text>
+        </view>
+        <view class='progress-wrap'>
+           <view style='width:{{percent}}%;' class='progress-inner'></view>
+        </view>
+        <view class='price-wrap2 dp-flex fl-al-center fl-jc-between'>
+          <view class='price-l'>已砍{{total_price}}元</view>
+          <view class='price-r'>还剩
+            <text class='color-pink'>{{remain}}</text>元
+          </view>
+        </view>
+        <!--按钮状态做变化-->
+        <view class='kj-button2 button' wx:if="{{status == 0}}" bindtap='bargain'>自砍一刀</view>
+        <view class='kj-button2 button' wx:if="{{status == 1}}">
+          邀请好友砍一刀
+          <button open-type='share' class='share-button'></button>
+        </view>
+        <view class='default-button button' wx:if="{{status == 1}}" bindtap='goshop'>立即下单</view>
+        <view class='kj-button2 button' wx:if="{{status == 2}}" bindtap='goshop'>立即下单</view>
+     </view>
+  </view>
+  <!--尾部-->
+  <view class='shadow bargain-list'>
+      <view class="inner">
+        <image class='inner-bg' src="../../images/bargain/img_inbg.png"></image>
+        <view class="bargain-list--title">砍价记录</view>
+        <view class="item dp-flex fl-al-center fl-jc-center" wx:for="{{bargainlist}}" wx:key="id">
+              <view class="item-img">
+                 <image src="{{item.avatar}}"></image>
+              </view>
+              <view class='flex-1'>
+                 <view class='username'>
+                    {{item.nickname}}
+                 </view>
+                 <view class='time'>
+                    {{item.bargain_time}}
+                 </view>
+              </view>
+              <view class='remain'>
+                  为您砍了<text class='color-pink'>{{item.price}}</text>元
+              </view>
+        </view>
+      </view>
+  </view>
+  <backindex/>
+</view>
+
+<view class='bargain-toast' wx:if="{{toastFlag}}" bindtap='hideToast'>
+  <view class='inner'>
+    <image class='bg' src="/images/bargain/img_tanchuang_faqi@2x.png" mode='widthFix'></image>
+    <image class='button-img' src='/images/bargain/btn_join@2x.png' mode='widthFix'></image>
+    <view class='button-text' catchtap='share'>邀请好友砍一刀
+    <button open-type='share' class='share-button'></button>
+    </view>
+    <view class='win-text'>
+      你已砍了
+      <text class='_inner-text color-pink'>{{win}}</text>
+      元
+    </view>
+  </view>
+</view>

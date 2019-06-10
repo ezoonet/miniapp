@@ -1,0 +1,7 @@
+<view class="unlink">
+  <image class='image' src="../../images/common/blank.png"></image>
+  <view class="text">您的账号已被冻结</view>
+  <view class="text" wx:if="{{id}}">您的ID:{{id}}~</view>
+  <button class="button kj-button" wx:if="{{id}}" bindtap='reFresh'>刷新试试</button>
+  <button class="button contact" open-type='contact'>联系客服</button>
+</view>

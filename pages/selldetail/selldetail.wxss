@@ -1,0 +1,29 @@
+/* pages/bargaindetail/bargaindetail.wxss */
+@import "/pages/wxParse/wxParse.wxss";
+page{
+  background: #f5f6f7
+}
+.container{
+  box-sizing: border-box;
+}
+.empower{
+  height: 100vh;
+  box-sizing: border-box;
+  padding-top: 150rpx;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .3);
+  z-index: 101;
+}
+.empower .inner{
+  width: 300px;
+  margin: 0 auto;
+  padding:30px 0;
+  background: #fff;
+  border-radius: 5px;
+}
+.height49{
+  height: 49px;
+}

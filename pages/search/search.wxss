@@ -1,0 +1,149 @@
+/* pages/search/search.wxss */
+.container{
+  padding: 10px 0 15px 10px;
+}
+.search-wrap{
+  display: flex;
+  align-items: center;
+}
+.search-wrap .search{
+  flex: 1;
+  margin-top: 0;
+  padding: 0 25px 0 15px;
+  justify-content: start
+}
+.search-wrap .search input{
+  flex: 1;
+  height: 100%;
+  color: #353535;
+}
+.search-wrap .search .close{
+  width: 15px;
+  height: 15px;
+  display: block;
+  position: absolute;
+  right: 5px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.search-wrap .cancel{
+  margin: 0 10px;
+  font-size: 15px;
+  color: #333;
+}
+.link-list{
+  position: absolute;
+  left: 15px;
+  width: calc(100% - 15px);
+  height: calc(100vh - 40px);
+  background: #fff;
+  top: 40px;
+  z-index: 99;
+}
+.link-list .item{
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f5f6f7;
+  padding: 10px 0;
+}
+.link-list .item image{
+  width: 12px;
+  height: 12px;
+  display: block;
+  margin-right: 10px;
+  opacity: .6;
+}
+.link-list .item text{
+  font-size: 14px;
+  color: #353535;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.history{
+  margin-right:10px;
+  margin-top: 20px;
+}
+.history .history-header{
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  font-weight: bold;
+  justify-content: space-between;
+}
+.history .history-header image{
+  width: 15px;
+  height: 15px;
+  display: block;
+}
+.history-wrap{
+   margin-top: 20px;
+}
+.history-wrap text{
+  display: inline-block;
+  background: #f5f6f7;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 15px;
+  color: #353535;
+  text-align: center;
+  font-size: 13px;
+  padding: 0 15px;
+  margin:  0 5px 10px 0;
+}
+.sell-wrap .item{
+  display: flex;
+  background: #fff;
+  margin-bottom: 10px;
+  padding: 10px 10px 10px 0;
+}
+.sell-wrap .item .image-wrap{
+ width: 200rpx;
+ height: 200rpx;
+ margin-right: 10px;
+}
+.sell-wrap .item .image-wrap image{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.sell-wrap .item .info{
+  flex: 1;
+  overflow: hidden;
+}
+.sell-wrap .item .info .title{
+  font-size: 14px;
+  line-height: 20px;
+  color: #353535;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.sell-wrap .item .info .shop-name{
+  font-size: 12px;
+  color: #999;
+  margin: 10px 0 20px;
+}
+.sell-wrap .price-wrap{
+  display: flex;
+  align-items: flex-end;
+}
+.sell-wrap .price-wrap .price{
+  font-size: 30rpx;
+  color: #e51c23;
+}
+.sell-wrap .price-wrap .oprice{
+  font-size: 22rpx;
+  color: #999;
+  text-decoration: line-through;
+  flex: 1;
+  overflow: hidden;
+  margin: 0 5px;
+}
+.sell-wrap .price-wrap .address{
+  font-size: 20rpx;
+  color: #999;
+}

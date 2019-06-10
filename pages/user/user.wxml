@@ -1,0 +1,72 @@
+<view class="empower" wx:if="{{empowerFlag && !unlink}}">
+    <empower bindgetUserinfo="getUserinfo"></empower>
+</view>
+<view class="user-wrap" wx:if="{{!empowerFlag && !unlink}}">
+    <view class="user-top">
+        <view class="item dp-flex fl-al-center">
+            <view class="img-wrap">
+                  <image src="{{userinfo.avatar}}"></image>
+            </view>
+            <view class="info flex-1">
+              <view class="name">
+                {{userinfo.nickname}}
+              </view>
+            </view>
+        </view>
+        <view class="item" style='border-bottom:0;padding-bottom:0'>
+          <view class="item-header dp-flex fl-al-center" >
+            <image src="../../images/common/icon_order@2x.png"></image>
+            <text class="flex-1">我的订单</text>
+          </view>
+          <view data-status="0" bindtap='toBargain' class="item-foot dp-flex fl-al-center fl-jc-between" style="border-bottom:1px solid #f5f6f7;padding-bottom:15px">
+            <text>砍价订单</text>
+            <image src="../../images/common/right-arrow.png"></image>
+          </view>
+        </view>
+         <view bindtap='toBargain' data-status="2" class="item item-foot dp-flex fl-al-center fl-jc-between">
+          <text>砍价订单兑换券</text>
+          <image src="../../images/common/right-arrow.png"></image>
+        </view>
+        <view bindtap='toSell' data-status="0" class="item item-foot dp-flex fl-al-center fl-jc-between">
+          <text>特惠订单</text>
+          <image src="../../images/common/right-arrow.png"></image>
+        </view>
+        <view bindtap='toSell' data-status="2" class="item item-foot dp-flex fl-al-center fl-jc-between">
+          <text>特惠订单兑换券</text>
+          <image src="../../images/common/right-arrow.png"></image>
+        </view>
+        
+    </view>
+    <view class="user-bottom">
+       <view class="item">
+          <view class="item-header dp-flex fl-al-center">
+            <image src="../../images/common/icon_service@2x.png"></image>
+            <text class="flex-1">我的服务</text>
+          </view>
+          <view bindtap='toEdit' class="item-foot dp-flex fl-al-center fl-jc-between">
+            <text>手机号码</text>
+            <text class="text-r flex-1 color-grey">{{tel}}</text>
+            <image src="../../images/common/right-arrow.png"></image>
+          </view>
+       </view>
+       <view class="item item-foot dp-flex fl-al-center">
+          <text>联系客服</text>
+          <text class="text-r flex-1 color-grey">{{serviceTime}}</text>
+          <image src="../../images/common/right-arrow.png"></image>
+          <button class="contact" open-type='contact'></button>
+       </view>
+       <view bindtap='call' wx:if="{{shanghutel}}" data-call="{{shanghutel}}" class="item item-foot dp-flex fl-al-center">
+          <text>商户合作</text>
+          <text class="text-r flex-1 color-grey">{{shanghutel}}</text>
+          <image src="../../images/common/right-arrow.png"></image>
+       </view>
+       <view data-call="{{kefutel}}" wx:if="{{kefutel}}" bindtap='call' class="item item-foot dp-flex fl-al-center">
+          <text>客服电话</text>
+          <text class="text-r flex-1 color-grey">{{kefutel}}</text>
+          <image src="../../images/common/right-arrow.png"></image>
+       </view>
+    </view>
+    <view class="coptyright color-grey text-center">
+      <text>更多优惠,尽在蚁购生活~\n v{{version}}</text>
+    </view>
+</view>

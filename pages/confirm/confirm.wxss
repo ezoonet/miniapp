@@ -1,0 +1,136 @@
+/* pages/confirm/confirm.wxss */
+page{
+  background: #f5f6f7
+}
+.goods{
+  padding: 15px;
+  background: #fff;
+}
+.goods .image-wrap{
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+.goods .image-wrap image{
+  width: 100%;
+  height: 100%;
+}
+.goods .info{
+  position: relative;
+}
+.goods .title{
+  font-size: 14px;
+  line-height: 20px;
+  color: #353535;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.goods .address{
+  font-size: 12px;
+  color: #999;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.goods .price-wrap{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.goods .price-wrap .price{
+  font-size: 16px;
+  color: #e51c23;
+  display: inline-block;
+  margin-right: 5px;
+}
+.goods .price-wrap .oprice{
+  font-size: 12px;
+  color: #999;
+  text-decoration: line-through;
+  display: inline-block
+}
+.goods .price-wrap .num{
+  font-size: 12px;
+  color: #999;
+}
+.bottom-options{
+  height: 49px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  background: #fff;
+  line-height: 49px;
+}
+.bottom-options .item{
+  color: #999;
+  font-size: 14px;
+  box-sizing: border-box;
+  padding-left: 20px;
+}
+.bottom-options .item text{
+  font-size: 16px;
+  color: #e51c23;
+}
+.bottom-options .goshop{
+  width: 120px;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+}
+.fix-iphonex-button::after {
+  background: #f5f6f7;
+}
+.height49{
+  height: 49px;
+}
+.notice{
+  padding-left: 15px;
+  padding-top: 15px;
+  background: #fff;
+}
+.notice .item{
+  border-bottom: 1px solid #f5f6f7;
+  padding: 10px 0;
+  color: #333;
+  font-size: 14px;
+  line-height: 18px;
+  align-items: flex-start;
+}
+.notice .round{
+  width: 5px;
+  height: 5px;
+  background: #000;
+  border-radius: 100%;
+  margin-right: 10px;
+  margin-top: 8px;
+}
+.tel-wrap{
+  padding: 15px;
+  background: #fff;
+}
+.tel-wrap .h1{
+  margin-bottom: 5px;
+}
+.tel-wrap .tel-tips{
+  font-size: 12px;
+  color: #999;
+}
+.tel-wrap .tel-head{
+  margin-right: 10px;
+}
+.tel-wrap .tel{
+  font-size: 16px;
+  color: #333;
+}
+.tel-wrap .arrow{
+  width: 15px;
+  height: 15px;
+  display: block;
+  margin-left: 10px;
+}

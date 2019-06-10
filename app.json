@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/user/user",
+    "pages/bargaindetail/bargaindetail",
+    "pages/bargaing/bargaing",
+    "pages/index/index",
+    "pages/sellList/sellList",
+    "pages/orderBargainDetail/orderBargainDetail",
+    "pages/orderBargainExchange/orderBargainExchange",
+    "pages/orderSellDetail/orderSellDetail",
+    "pages/orderSellExchange/orderSellExchange",
+    "pages/bargainList/bargainList",
+    "pages/selldetail/selldetail",
+    "pages/banuser/banuser",
+    "pages/unlink/unlink",
+    "pages/editTel/editTel",
+    "pages/confirm/confirm",
+    "pages/search/search"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口"
+    }
+  },
+  "tabBar": {
+    "selectedColor": "#e51c23",
+    "list": [
+      {
+      "pagePath": "pages/index/index",
+      "text": "生活家",
+      "iconPath": "images/tabbar/tab_icon_home_default@2x.png",
+      "selectedIconPath": "images/tabbar/tab_icon_home_selected@2x.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "images/tabbar/user.png",
+        "selectedIconPath": "images/tabbar/userd.png"
+      }
+    ]
+  }
+}

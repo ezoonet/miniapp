@@ -1,0 +1,10 @@
+{ 
+  "usingComponents": {
+    "empty":"../../components/empty/empty",
+    "scrollbottom": "../../components/scrollbottom/scrollbottom"
+  },
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance":100,
+  "navigationBarTitleText": "蚁购生活",
+  "backgroundColor": "#f5f6f7"
+}

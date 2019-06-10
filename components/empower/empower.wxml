@@ -1,0 +1,8 @@
+<view class="empower">
+   <image class='image' src="../../images/common/shadowlogo.png"></image>
+   <view class="title1">蚁购生活</view>
+   <view class="line"></view>
+   <view class="title2">该程序获得以下授权:</view>
+   <view class="title3">获取您的公开信息(昵称和头像等)</view>
+   <button class="button" type='button' bindgetuserinfo="onGotUserInfo" open-type='getUserInfo'>确认授权</button>
+</view>

@@ -1,0 +1,20 @@
+//处理空title
+var defaultGoodsTitle = function (val) {
+  if(val == '') { 
+    return '商品'
+  } else {
+    return val
+  }
+}
+var defalutGoodsImg = function (val) {
+  if (val == '') {
+    return '/images/common/noimg.png' 
+  } else {
+    
+    return val
+  }
+}
+module.exports = {
+  defaultGoodsTitle: defaultGoodsTitle,
+  defalutGoodsImg: defalutGoodsImg
+}

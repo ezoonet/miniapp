@@ -1,0 +1,38 @@
+<!--pages/bargainList/bargainList.wxml-->
+<wxs module="default" src="../../wxs/default.wxs"/>
+<view class="tab-list">
+  <view wx:for="{{tablist}}" wx:for-item="item" data-active="{{index}}" bindtap='changelist' class="tabs {{active==index?'active':''}}" wx:key="{{item.id}}">
+    {{item.text}}
+    <view class='line kj-button'></view>
+  </view>
+</view>
+<!-- <view class="height27"></view> -->
+<!--全部-->
+<view wx:for="{{allList}}" wx:key="{{itemWrap.id}}" wx:for-item="itmeWrap" class="order-list" hidden='{{ active != index}}'>
+    <view class="item common-mb" bindtap='goDetail' data-id="{{item.id}}" wx:for="{{itmeWrap.list}}" wx:key="{{item.id}}" data-status = "{{item.status}}">
+      <view class='item-top dp-flex'>
+        <view class="image-wrap">
+          <image mode="aspectFill" src="{{default.defalutGoodsImg(item.goods_primary_img.small_pic)}}"></image>
+        </view>
+        <view class='info flex-1'>
+          <view class='title title-hidden'>{{default.defaultGoodsTitle(item.goods_title)}}</view>
+          <view class='time' wx:if="{{item.status != 9}}">创建时间:{{item.create_time}}</view>
+          <view class='time' wx:if="{{item.status == 9}}">交易关闭</view>
+          <view class='dp-flex fl-al-center fl-jc-between price-wrap'>
+              <view class='num'>数量:{{item.total_num}}</view>
+              <view class='price'>合计:
+                <text class="color-red">¥{{item.total_price}}</text>
+              </view>
+          </view>
+        </view>
+      </view>
+      <!--status 订单状态。0待付款，1已付款，9已取消-->
+      <view class='item-bottom dp-flex'>
+        <view class='button kj-button' wx:if="{{item.status == 0}}" data-sn = "{{item.order_no}}" catchtap='goPay'>去支付</view>
+        <view class='button kj-button' data-id="{{item.goods_id}}"  wx:if="{{item.status == 9}}" catchtap='goShop'>继续购物</view>
+        <view catchtap='goExchange' class='button kj-button' data-id="{{item.id}}" wx:if="{{item.status == 1}}">兑换券</view>
+      </view>
+    </view>
+    <empty wx:if="{{itmeWrap.nodata}}"></empty>
+    <scrollbottom wx:if="{{itmeWrap.bottomFlag}}"></scrollbottom>
+</view>

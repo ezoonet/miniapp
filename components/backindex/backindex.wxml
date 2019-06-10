@@ -1,0 +1,2 @@
+<!--components/backindex/backindex.wxml-->
+<view class='backindex' bindtap='backindex'>去首页逛逛>></view>
