@@ -1,9 +1,10 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/user/user",
     "pages/bargaindetail/bargaindetail",
     "pages/bargaing/bargaing",
-    "pages/index/index",
+    
     "pages/sellList/sellList",
     "pages/orderBargainDetail/orderBargainDetail",
     "pages/orderBargainExchange/orderBargainExchange",

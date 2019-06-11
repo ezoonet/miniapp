@@ -6,7 +6,7 @@
     </view>
 </view>
 <view class='container'>
-  <view class="shadow common-mb">
+  <view class="shadow common-mb" bindtap='godetail'>
     <view class="inner dp-flex">
       <image class='inner-bg' src="../../images/bargain/img_inbg.png"></image>
       <view class='image-wrap'>

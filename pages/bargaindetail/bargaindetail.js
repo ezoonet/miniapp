@@ -11,7 +11,7 @@ Page({
     empowerFlag: false,
     userinfo: null,
     unlink: false,//账号冻结的话显示弹层
-    goodsid: 16,
+    goodsid: '',
     day: '00',
     hour: '00',
     min: '00',
@@ -26,8 +26,10 @@ Page({
     win:0,
     toastFlag:false,
   },
-  share(){
-
+  godetail(){
+    wx.navigateTo({
+      url: '/pages/selldetail/selldetail?id='+this.data.goodsid,
+    })
   },
   hideToast(){
     this.setData({
@@ -146,11 +148,12 @@ Page({
     obj.img = data.primary_img.original_pic;
     obj.shop_name = data.shop_name;
     obj.shop_address = '';
-    obj.price = Number(data.base_price) + Number(this.data.total_price);
+    obj.price = Math.round((Number(data.price) - Number(this.data.total_price)) * 100) / 100 ;
     obj.market_price = data.price;
     obj.num = 1;
     obj.id = data.id;
     obj.type = 1;
+    console.log(obj.price, Number(data.price), Number(this.data.total_price))
     let app =  getApp();
     app.globalData.cartItem = obj;
     wx.navigateTo({
@@ -171,6 +174,10 @@ Page({
       this.setData({
         win:res.price,
         toastFlag:true
+      })
+    },error => {
+      wx.showModal({
+        title: error.msg,
       })
     })
     
@@ -313,7 +320,7 @@ Page({
     }else{
       return {
         title: '【砍价活动】'+this.data.sku.title,
-        path: '/pages/bargaing/bargaing?id='+this.data.sku.id+'&uid'+app.globalData.appUserinfo.uid
+        path: '/pages/bargaing/bargaing?id='+this.data.sku.id+'&uid='+app.globalData.appUserinfo.uid
       }
     }
   }

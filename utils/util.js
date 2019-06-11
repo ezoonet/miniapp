@@ -19,8 +19,8 @@ const http = (url,data,type) =>{
     data.token ='d08d2231c90e6fc61b47098960dafb54'
     data.uid = '538bdae37c48ff22bbbb9b579332acbd'
   }
-  let prefix = 'http://devapi.ezoonet.com/wechat/';
-  // let prefix = 'https://api.ezoonet.com/wechat/';
+  // let prefix = 'http://devapi.ezoonet.com/wechat/';
+  let prefix = 'https://api.ezoonet.com/wechat/';
   //测试服需要的数据
   if(prefix.indexOf('dev') != -1 && url.indexOf('Login') != -1){
     data.is_test = 1

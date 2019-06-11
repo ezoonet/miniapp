@@ -12,7 +12,7 @@ Page({
   goGoods(event){
     let id = event.currentTarget.dataset['id'];
     wx.navigateTo({
-      url: '/pages/selldetail/selldetail?id='+id,
+      url: '/pages/bargaindetail/bargaindetail?id='+id,
     })
   },
   getDetail(){

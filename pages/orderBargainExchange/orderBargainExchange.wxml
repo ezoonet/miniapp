@@ -18,7 +18,7 @@
     <view class='h1'>兑换券</view>
     <view class='item' wx:for="{{goods.code}}" wx:key="{{item.code}}">
       <image mode="aspectFill" src="{{default.defalutGoodsImg(item.url)}}"></image>
-      <view class='text'>兑换码:{{item.code}}</view>
+      <view class='text' wx:if="{{item.code}}">兑换码:{{item.code}}</view>
     </view>
     <view class='shop-info dp-flex fl-al-center' bindtap='callTel' data-tel="{{goods.shop_phone}}">
       <view class='shop-info-l flex-1'>

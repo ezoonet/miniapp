@@ -48,7 +48,10 @@
     <text class='text'>客服</text>
     <button open-type='contact' class="contact"></button>
   </view>
-  <view class="goshop kj-button {{stopFlag ? 'disabled':''}}" bindtap='showSku'>
+  <view class="goshop kj-button {{stopFlag ? 'disabled':''}}" bindtap='showSku' wx:if="{{sku.type==2}}">
     立即购买
+  </view>
+  <view class="goshop kj-button" bindtap='back' wx:if="{{sku.type==1}}">
+    去砍价
   </view>
 </view>

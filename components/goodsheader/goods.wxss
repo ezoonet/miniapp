@@ -152,6 +152,8 @@
 .tips .body{
   color: #353535;
   margin-left: 10px;
+  flex: 1;
+  overflow: hidden;
 }
 .kefu-wrap{
   padding:15px;

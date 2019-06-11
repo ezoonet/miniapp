@@ -38,6 +38,9 @@ Page({
   },
   onShow(){
     this.getlcoation();
+    wx.setNavigationBarTitle({
+      title: '蚁购生活',
+    })
   },
   onShareAppMessage(){},
   //获取经纬度

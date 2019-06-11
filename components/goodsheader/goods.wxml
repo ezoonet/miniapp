@@ -8,7 +8,7 @@
         <image class='image' mode="aspectFill" lazy-load data-id='{{index}}' src="{{item.big_pic}}"></image>
       </swiper-item>
     </swiper>
-    <view class="info-inner-wrap dp-flex">
+    <view class="info-inner-wrap dp-flex" wx:if="{{goods.type==2}}">
         <view class="price-wrap kj-button flex-1 dp-flex fl-al-center">
             <view class="price-left">
                 ¥
