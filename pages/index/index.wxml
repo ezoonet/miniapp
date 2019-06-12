@@ -25,7 +25,7 @@
   </view>
   <!--砍价列表模块-->
     <view class="item-wrap" hidden="{{active!=1}}">
-      <view wx:for="{{bargain.list}}" wx:for-item="item" class="item" style="margin-bottom:0" wx:key="id">
+      <view wx:for="{{bargain.list}}" wx:for-item="item" bindtap='toBargain' data-id="{{item.id}}" class="item" style="margin-bottom:0" wx:key="id">
           <image src="{{item.primary_img.big_pic}}" mode="widthFix" class="topimg"></image>
           <view class='address-wrap'>
           <text>{{item.shop_name}}</text>
@@ -43,7 +43,7 @@
                   </view>
                   <view class="num">剩{{item.stock}}份</view>
                 </view>
-                <button type='button' bindtap='toBargain' data-id="{{item.id}}" class="kj-button">去砍价</button>
+                <button type='button'  class="kj-button">去砍价</button>
               </view>
           </view>
       </view>

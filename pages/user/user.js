@@ -12,7 +12,7 @@ Page({
     unlink: false,//账号冻结的话显示弹层
     tel:'',
     banFlag:false,
-    version:'1.2.7',
+    version:'1.2.9',
     shanghutel:'',
     kefutel:'',
     serviceTime:'获取中'
