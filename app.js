@@ -1,5 +1,5 @@
 //app.js
-var aldstat = require("./utils/ald-stat.js")
+// var aldstat = require("./utils/ald-stat.js")
 App({
   onLaunch: function () {
     // 获取小程序更新机制兼容

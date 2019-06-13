@@ -19,6 +19,7 @@ Page({
     let obj = {};
     obj.id = this.data.goodsid;
     goodsDetail(obj).then(res => {
+      console.log(res)
       if(res.length==0){
         wx.showToast({
           title: '商品已下架',
@@ -52,13 +53,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options)
-    if (options.id){
-      const id = options.id;
-      this.setData({
-        goodsid: id
-      })
-    }
+    const id = options.id;
+    this.setData({
+      goodsid: id
+    })
     
     
   },
@@ -74,6 +72,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+
     const timer1 = setInterval(() => {
       if (app.globalData.emPowerUserInfoFlag !== null) {
         clearInterval(timer1)
@@ -179,7 +178,7 @@ Page({
     let data = this.data.sku;
     return {
       title:data.title,
-      url:'/pages/selldetail?id='+data.id+'&sharesell=0',
+      path:'/pages/selldetail/selldetail?id='+data.id,
       imageUrl: data.primary_img.original_pic
     }
   }

@@ -47,7 +47,7 @@ const http = (url,data,type) =>{
             success:res=>{
               setTimeout(()=>{
                 wx.reLaunch({
-                  url: '../../pages/index/index',
+                  url: '../../pages/user/user',
                 })
               },2000)
             }
